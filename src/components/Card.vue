@@ -1,5 +1,5 @@
 <template>
-  <div class="card p-5 m-10 rounded-lg w-[500px] h-[200px] bg-neutral-800 flex items-center justify-center">
+  <div class="card p-5 m-10 rounded-lg w-[500px] h-[200px] bg-neutral-800 flex items-center justify-center hover:shadow-2xl">
     <img class="w-40 h-40 object-cover rounded-lg mr-5" src="../assets/backbg.png" />
     <div class="ml-2">
       <div class="title text-neutral-200 mb-2 text-lg">"프론트 노동" 열일하는 개발자 디아</div>
