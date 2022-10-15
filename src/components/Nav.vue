@@ -1,8 +1,7 @@
 <template>
-  <nav class="navbar font-mono flex justify-between items-center p-4 rounded-full m-10 shadow-2xl bg-neutral-800">
-    <nav-title class="font-bold text-4xl ml-20 text-neutral-300">KDW</nav-title>
-    <nav-item class="font-bold text-2xl mr-20 w-8 brightness-75 hover:brightness-100"><img src="../assets/sign.png" /></nav-item>
-  </nav>
+  <header>
+    Discord News
+  </header>
 </template>
 
 <script>
@@ -12,4 +11,19 @@ export default {
 </script>
 
 <style>
+header {
+    font-family: 'DM Serif Display', serif;
+    backdrop-filter: saturate(200%) blur(10px);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 100;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    padding: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.171);
+    border-bottom-width: 1px;
+    font-size: 32px;
+}
 </style>
