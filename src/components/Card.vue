@@ -1,17 +1,32 @@
 <template>
-  <div class="card p-5 m-10 rounded-lg w-[500px] h-[200px] bg-neutral-800 flex items-center justify-center hover:shadow-2xl">
-    <img class="w-40 h-40 object-cover rounded-lg mr-5" src="../assets/backbg.png" />
+  <!-- <div class="card p-5 m-10 rounded-lg w-[500px] h-[200px] flex items-center justify-center hover:shadow-2xl">
+    <img class="w-40 h-40 object-cover rounded-lg mr-5" :src="img" />
     <div class="ml-2">
-      <div class="title text-neutral-200 mb-2 text-lg">"프론트 노동" 열일하는 개발자 디아</div>
-      <div class="content text-neutral-500">개발자인 디아는 스네 위키 개발을 위해 프론트 개발을 하고 있습니다, 개발자인 디아는 스네 위키 개발을 위해 프론트 개발을 하고 있습니다</div>
+      <div class="title text-neutral-200 mb-2 text-lg">{{ title }}</div>
+      <div class="content text-neutral-500">{{ desc }}</div>
     </div>
+  </div> -->
+  <div class="post">
+    <div class="texts">
+      <span class="timestamp">{{ timestamp }}</span>
+      <h2>{{ title }}</h2>
+      <p>{{ desc }}</p>
+      <a href="/">더 알아보기 ></a>
+    </div>
+    <img :src="img">
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'Card'
+  name: 'Card',
+  props: {
+    time: String,
+    title: String,
+    desc: String,
+    img: String
+  }
 }
 </script>
 
@@ -34,4 +49,56 @@ export default {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
+
+  .posts {
+  padding: 80px 30%;
+}
+
+.posts > div {
+  margin-bottom: 50px;
+  padding-top: 50px;
+  border-top: 1px #909090 solid;
+}
+
+.posts > div h1 {
+  margin-top: 0;
+}
+
+.posts > div:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.post img {
+  margin-left: 20px;
+  border-radius: 30px;
+  width: 250px;
+}
+
+.timestamp {
+  font-size: 12px;
+}
+
+.posts a {
+  text-decoration: none;
+ color: #909090;
+}
+
+.post h2 {
+  margin-top: 0;
+}
+
+.post {
+  margin-bottom: 30px;
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}
 </style>
